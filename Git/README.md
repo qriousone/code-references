@@ -1,5 +1,5 @@
 # Git
-#### Delete all local branches except current branch, master, and unmerged branches  
+### Delete all local branches except current branch, master, and unmerged branches  
 ```sh
 git branch -D `git branch --merged | grep -v \* | grep -v "master" | xargs`
 ```
