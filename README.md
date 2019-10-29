@@ -2,7 +2,7 @@
 
 My collection of shortcuts and notes for different programming languagues:
   - [Git](Git)
-  - [JavaScript](JavaScript)
+  - [JavaScript](Javascript)
   - [Vue](#)
   - [CSS Grid](#)
   - [React](#)
