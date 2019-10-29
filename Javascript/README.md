@@ -103,6 +103,9 @@ var x = 1 + 6;
 var x = 7;
 ```
 
+--  
+*Kereki, Federico. "Referential Transparency" Mastering Javascript Functional Programming by Federico Kereki, O'reilly, N/A,*  
+*https://www.oreilly.com/library/view/mastering-javascript-functional/9781787287440/9cf53458-588c-4450-9798-16b77b2005df.xhtml*
 
 ## Service Worker
 A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
