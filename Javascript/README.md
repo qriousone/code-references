@@ -89,6 +89,21 @@ Instances inherit directly from other objects. Instances are typically instantia
 *Elliot, Eric. "Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?" Medium, Medium, Jan 18, 2016,*  
 *https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9*
 
+## Referential Transparency
+In mathematics, Referential Transparency is the property that lets you replace an expression with its value, and not change the results of whatever you were doing.
+
+To give a simple example, when an optimizing compiler decides to do constant folding and replace a sentence like:
+```javascript
+var x = 1 + 2 * 3;
+
+// with:
+var x = 1 + 6;
+
+//or, even better, directly with:
+var x = 7;
+```
+
+
 ## Service Worker
 A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
 
