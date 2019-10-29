@@ -89,6 +89,14 @@ Instances inherit directly from other objects. Instances are typically instantia
 *Elliot, Eric. "Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?" Medium, Medium, Jan 18, 2016,*  
 *https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9*
 
+## Service Worker
+A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
+
+--  
+*Gaunt, Matt. "Service Workers: an Introduction" Google, Google, N/A,*  
+*https://developers.google.com/web/fundamentals/getting-started/primers/service-workers*
+
+
 
 ## Temporal Dead Zone (TDZ)
 A period between entering scope and being declared where they (let, const) cannot be accessed.
