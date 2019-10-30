@@ -25,7 +25,7 @@ $ git push <remote-name> --delete <existing-branch>
 - **`<remote-name>`** is a short-hand label for a remote repository and "origin" is the conventional default name. There can be multiple remotes for your local repo and you use the remote name to push to them.
 - **`<existing-branch>`** branch you want to delete.
 
-### New Branches
+### New branches
 
 ```sh
 git checkout <branch-name>
