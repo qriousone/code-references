@@ -24,7 +24,7 @@ Alternative to the commands above, git checkout provides a convient method (-b) 
 ```sh
 git checkout -b <new-branch> <existing-branch>
 ```
-- **-b** is a git checkout argument to create a create and switching to the new HEAD.
+- **-b** is a git checkout argument to create and switch to the new branch.
 - **<existing-branch>** additional branch parameter for creating a branch from an existing branch — instead of branching from the current one. (Note: If you were to branch from master it's better to branch from 'origin/master' instead of just the branch name, 'master'. 'master' without origin will branch for local.)
 
 This command will push branch to remote
