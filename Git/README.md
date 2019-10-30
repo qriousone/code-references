@@ -10,6 +10,20 @@ git branch -D `git branch --merged | grep -v \* | grep -v "master" | xargs`
 - **|** A pipe is a form of redirection (transfer of standard output to some other destination)
 - **Xargs** It converts input from standard input into arguments to a command.
 
+### Delete local and remote branch
+```sh
+git branch -d <existing-branch>
+```
+- **-d** option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch.
+```sh
+git branch -D <existing-branch>
+```
+- **-D** option is an alias for --delete --force, which deletes the branch "irrespective of its merged status."
+```sh
+$ git push <remote-name> --delete <existing-branch>
+```
+- **`<remote-name>`** is a short-hand label for a remote repository and "origin" is the conventional default name. There can be multiple remotes for your local repo and you use the remote name to push to them.
+- **`<existing-branch>`** branch you want to delete.
 
 ### New Branches
 
