@@ -32,3 +32,10 @@ This command will push branch to remote
 git push -u origin <newly-created-branch>
 ```
 - **-u** is a git push argument to push upstream. This is a shorthand flag for `--set-upstream` Upstream sets the default remote branch for the current local branch. Any future git pull command (with the current local branch checked-out), will attempt to bring in commits from the `<remote-branch>` into the current local branch.
+
+
+### Reset file to origin
+To reset local file to its original state from origin
+```sh
+git checkout <path/filename>
+```
