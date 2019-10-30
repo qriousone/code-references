@@ -17,7 +17,7 @@ git branch -D `git branch --merged | grep -v \* | grep -v "master" | xargs`
 git checkout <branch-name>
 git branch <new-branch>
 ```
-- **git checkout** Switch to the branch with name entered following this command
+- **git checkout** Switch to the branch with the branch name entered following this command
 - **git branch** Create branch from current branch
 
 Alternative to the commands above, git checkout provides a convient method (-b) to create a new branch then switching to that newly created branch.
@@ -31,4 +31,4 @@ This command will push branch to remote
 ```sh
 git push -u origin <newly-created-branch>
 ```
-- **-u** is a git push argument to push upstream. This is a shorthand flag for `--set-upstream` Upstream sets the default remote branch for the current local branch. Any future git pull command (with the current local branch checked-out), will attempt to bring in commits from the <remote-branch> into the current local branch.
+- **-u** is a git push argument to push upstream. This is a shorthand flag for `--set-upstream` Upstream sets the default remote branch for the current local branch. Any future git pull command (with the current local branch checked-out), will attempt to bring in commits from the `<remote-branch>` into the current local branch.
