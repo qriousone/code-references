@@ -2,7 +2,12 @@
 ## Java
 ```java
 public MyClass {
-      public void showMessage(final String message) {
+    // method
+    public void showMessage(final String message) {
+        System.out.print(message);
+    }
+    // method with return
+    public String showMessage(final String message) {
         System.out.print(message);
         return message;
     }
@@ -13,7 +18,9 @@ MyClass myClassObj = new MyClass();
 myClassObj.showMessage("Hello");
 ```
 Java methods must be located inside a Java class. Parameters must be prefixed with a data type. Parameter values can be change but should be done carefully because it could lead to confusing code.
-- **final** *(optional)* parameter cannot be changed. Values inside an object reference can still be changed.
+- **void** tells the compiler that a function will not be returning any value after it is executed.
+- **final** *(optional — not often used)* parameter cannot be changed. Values inside an object reference can still be changed.
+- **return** statement determines what value returns by the method. Requires return-type to be define before the method's namespace
 ## JavaScript
 ```javascript
     // es5 function expression
