@@ -1,6 +1,6 @@
 # Methods
 ## JavaScript
-```js
+```javascript
     // es5 function expression
     var showMessage = function(message) {
         message = (typeof message !== 'undefined') ? message : 'hello world';
@@ -22,5 +22,5 @@ Is set to a variable, because of this it must be terminated with a semicolon (In
 ### function declaration
 a function declaration is prefixed with the `function` keyword. The function can be called anytime, before or after its creation.
 ### arrow function (aka 'fat arrow')
-is also a function expression. Option to omit both `function` and `return` keywords and curly brackets (as they are implicit in arrow functions).
+is also a function expression. Option to omit both `function` and `return` keywords and curly brackets (as they are implicit in arrow functions).  
 - **default parameter** can simply be defined in the function head by assigning the default value to the parameter.
