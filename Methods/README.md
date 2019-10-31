@@ -1,5 +1,5 @@
 # Methods
-## JavaScript
+<details><summary>## JavaScript</summary>
 ```js
     // es5 function expression
     var showMessage = function(message) {
@@ -24,3 +24,4 @@ a function declaration is prefixed with the `function` keyword. The function can
 ### arrow function (aka 'fat arrow')
 is also a function expression. Option to omit both `function` and `return` keywords and curly brackets (as they are implicit in arrow functions).
     - **default parameter** can simply be defined in the function head by assigning the default value to the parameter.
+</details>
