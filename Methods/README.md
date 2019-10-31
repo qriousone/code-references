@@ -1,5 +1,7 @@
 # Methods
-<details><summary>## JavaScript</summary>
+<details>
+  <summary>JavaScript</summary>
+
 ```js
     // es5 function expression
     var showMessage = function(message) {
@@ -16,6 +18,7 @@
         console.log(message)
     }
 ```
+
 ### function expression
 Is set to a variable, because of this it must be terminated with a semicolon (In JS, semicolon is use to terminate a statement — sometimes optional because of automatic-semicolon-insertion (ASI)). The function has to be created before the function is used.
 - **default parameter** requires a check in the function body. The type of paremeter checks if an argument is passed to it. If not, parameter is assigned a default value.
