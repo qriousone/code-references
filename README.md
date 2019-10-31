@@ -1,6 +1,7 @@
 # Code References
 
-My collection of shortcuts and notes for different programming languages:
+My collection of shortcuts and notes for different programming languages:  
+
 ## Languages
 - [Git](Git)
 - [JavaScript](Javascript)  
@@ -8,10 +9,6 @@ My collection of shortcuts and notes for different programming languages:
   - [React](#)
 - [CSS](CSS)  
     - [CSS Grid](#)
-
-## JavaScript Frameworks
-- [Vue](#)
-- [React](#)
 
 ## Holistic Concepts
   - [Methods](Methods)
