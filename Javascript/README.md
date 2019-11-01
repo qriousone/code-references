@@ -7,7 +7,7 @@ Instances inherit from classes (like a blueprint — a description of the class)
 The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
 
 --  
-*Elliott, Eric. "10 Interview Questions Every JavaScript Developer Should Know. Medium, Medium, Oct 2, 2015,*  
+*Elliott, Eric. "10 Interview Questions Every JavaScript Developer Should Know." Medium, Medium, Oct 2, 2015,*  
 *https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad9*5
 
 

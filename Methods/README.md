@@ -8,7 +8,7 @@ def show_message(message = "hello"):
 show_message("Hello World")
 ```
 - indentation — spaces are preferred.
-- code blocks are define by indentations rather than curly braces ( Base on [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide)
+- code blocks are define by indentations rather than curly braces (Based on [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide)
 - keyword arguments — arguments can be sent with `key=value` syntax and order of arguments does not matter
     ```python
     show_message(message = "Hello World")
