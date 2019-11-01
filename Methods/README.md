@@ -21,6 +21,43 @@ Java methods must be located inside a Java class. Parameters must be prefixed wi
 - **void** tells the compiler that a function will not be returning any value after it is executed.
 - **final** *(optional — not often used)* parameter cannot be changed. Values inside an object reference can still be changed.
 - **return** statement determines what value returns by the method. Requires return-type to be define before the method's namespace
+
+### method overloading
+```java
+public MyClass {
+    public void showMessage(final String message) {
+        System.out.print(message);
+    }
+    public void showMessage(final String greeting, final String name) {
+        System.out.print(message + " " + name);
+    }
+}
+// call
+MyClass myClassObj = new MyClass();
+myClassObj.showMessage("Hello"); // Hello
+myClassObj.showMessage("Hello", "Maurice"); // Hello Maurice
+```
+Java allows for method overloading. A method name can be meaningful for a couple sets of similar but different operations that perform the same single action.
+
+**Different types of overloading**:
+- Difference in the number of parameters
+- Difference in data type(s)
+- Difference in sequence of data type(s)
+- **Type promotion** smaller size data type is promoted to data type of bigger size when there's no matching argument type. Example below shows the float value got promoted to double type because of no matching type.
+    ```java
+    public MyClass {
+        public void showMessage(int a, double b) {
+            System.out.print("Method A");
+        }
+        public void showMessage(int a, double b, double c) {
+            System.out.print("Method B");
+        }
+    }
+    // call
+    MyClass myClassObj = new MyClass();
+    myClassObj.showMessage(100, 20.67f); // Method A
+    ```
+
 ## JavaScript
 ```javascript
     // es5 function expression
