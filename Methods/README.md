@@ -1,4 +1,27 @@
 # Methods
+## Python
+```python
+def show_message(message = "hello"):
+ System.out.print(message)
+
+# call
+show_message("Hello World")
+```
+- indentation — spaces are preferred.
+- code blocks are define by indentations rather than curly braces ( Base on [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide)
+- keyword arguments — arguments can be sent with `key=value` syntax and order of arguments does not matter
+    ```python
+    show_message(message = "Hello World")
+    ```
+- arbitrary arguments — added `*` before the parameter will accept any number of arguments. Function will recieve a tuple of arguments. Indivudual arguments can be access through index or indices.
+    ```python
+    def show_message(*message):
+     System.out.print(message[0] + " " + message[1])  # Hello Maurice
+
+    # call
+    show_message("Hello", "Maurice")
+    ```
+
 ## Java
 ```java
 public MyClass {
@@ -57,8 +80,7 @@ Java allows for method overloading. A method name can be meaningful for a couple
     MyClass myClassObj = new MyClass();
     myClassObj.showMessage(100, 20.67f); // Method A
     ```
-    **Byte size of float and double data types**  
-    
+    **Byte size of float and double data types**
     Floating point numbers (Aka floating point literals or real numbers). `Float` and `double` supports decimals. Floats are use for precision because it allows for more numbers. Float data type is a single numbers that occupies 4 bytes or 32 bits in computer memory. A bit stores a single value (0 or 1). Bits are grouped in groups of 8 to make one byte. Double data type is a double precision format that occupies 8 bytes of 64 bits in computer memory — twice the number of bytes occupied by floats. A float data type stores a decimal value with no more than 7 total digits of precision. 12.123456f can be saved as a float but 1.123456789f can't. Decimals will be stored as a double if not appended with an 'f'. Double data types stores up to 16 digits of precision.
 
 ## JavaScript
