@@ -7,7 +7,7 @@ My collection of shortcuts and notes for different programming languages:
 - [JavaScript](Javascript)  
   - [Vue](#)
   - [React](#)
-    - [Next](https://github.com/qriousone/code-references/blob/master/JavaScript/Next)
+    - [Next](https://github.com/qriousone/code-references/tree/master/Javascript/Next)
 - [CSS](CSS)  
     - [CSS Grid](#)
 
