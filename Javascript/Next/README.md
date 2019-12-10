@@ -145,7 +145,17 @@ const Layout = props => (
 
 export default Layout;
 ```
+```javascript
+import Layout from '../components/MyLayout';
 
+export default function About() {
+  return (
+    <Layout>
+      <p>This is the about page</p>
+    </Layout>
+  );
+}
+```
 ### Other methods for creating a Layout components
 #### Method 1 - High Order Component
 ```javascript
@@ -212,3 +222,30 @@ export default function Index() {
   return <Layout content={indexPageContent} />;
 }
 ```
+## Dynamic Pages
+Create a list of posts by replacing the content in `pages/index.js with:
+```javascript
+import Layout from '../components/MyLayout';
+import Link from 'next/link';
+
+const PostLink = props => (
+  <li>
+    <Link href={`/post?title=${props.title}`}>
+      <a>{props.title}</a>
+    </Link>
+  </li>
+);
+export default function Blog() {
+  return (
+    <Layout>
+      <h1>My Blog</h1>
+      <ul>
+        <PostLink title="Hello Next.js" />
+        <PostLink title="Learn Next.js is awesome" />
+        <PostLink title="Deploy apps with Zeit" />
+      </ul>
+    </Layout>
+  );
+}
+```
+The above example is passing data via query string. The data is from title prop is being passed through the `title` query param.
