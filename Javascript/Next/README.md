@@ -28,6 +28,8 @@ https://nextjs.org/learn/basics/getting-started
 4. View in http://localhost:3000 and you'll see a 404 page.
 
 ## Creating a Page
+The only special directories next needs are `/pages` and `/public`. Other directories could be named anything.
+
 1. Create pages/index.js by running the following:
     ```sh
     cd pages
@@ -78,4 +80,135 @@ export default Index;
 
 Source: https://nextjs.org/learn/basics/navigate-between-pages/using-link
 
-Next.js supports client-side history — so when you hit the back button, it will navigate to the page client-side.
+Next.js supports client-side history — when you hit the back button, it will navigate to the page client-side.
+
+If we need to add title attribute to the link you should do it like this:
+```javascript
+<Link href="/about">
+  <a title="About Page">About Page</a>
+</Link>
+```
+## Shared Components
+Create header component `components/Header.js` with code below:
+```javascript
+import Link from 'next/link';
+
+const linkStyle = {
+  marginRight: 15
+};
+
+const Header = () => (
+  <div>
+    <Link href="/">
+      <a style={linkStyle}>Home</a>
+    </Link>
+    <Link href="/about">
+      <a style={linkStyle}>About</a>
+    </Link>
+  </div>
+);
+
+export default Header;
+```
+### Import component
+
+Replace code inside pages/index.js with:
+```javascript
+import Header from '../components/Header';
+
+export default function Index() {
+  return (
+    <div>
+      <Header />
+      <p>Hello Next.js</p>
+    </div>
+  );
+}
+```
+### Layout component
+Add this code to `components/MyLayout.js`:
+```javascript
+import Header from './Header';
+
+const layoutStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+};
+
+const Layout = props => (
+  <div style={layoutStyle}>
+    <Header />
+    {props.children}
+  </div>
+);
+
+export default Layout;
+```
+
+### Other methods for creating a Layout components
+#### Method 1 - High Order Component
+```javascript
+// components/MyLayout.js
+
+import Header from './Header';
+
+const layoutStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+};
+
+const withLayout = Page => {
+  return () => (
+    <div style={layoutStyle}>
+      <Header />
+      <Page />
+    </div>
+  );
+};
+
+export default withLayout;
+```
+```javascript
+// pages/index.js
+
+import withLayout from '../components/MyLayout';
+
+const Page = () => <p>Hello Next.js</p>;
+
+export default withLayout(Page);
+```
+
+#### Method 2 - Page content as a prop
+```javascript
+// components/MyLayout.js
+
+import Header from './Header';
+
+const layoutStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+};
+
+const Layout = props => (
+  <div style={layoutStyle}>
+    <Header />
+    {props.content}
+  </div>
+);
+
+export default Layout;
+```
+```javascript
+// pages/index.js
+
+import Layout from '../components/MyLayout.js';
+
+const indexPageContent = <p>Hello Next.js</p>;
+
+export default function Index() {
+  return <Layout content={indexPageContent} />;
+}
+```
