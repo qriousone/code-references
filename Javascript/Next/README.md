@@ -223,7 +223,7 @@ export default function Index() {
 }
 ```
 ## Dynamic Pages
-Create a list of posts by replacing the content in `pages/index.js with:
+Create a list of posts by replacing the content in `pages/index.js` with:
 ```javascript
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
@@ -249,3 +249,49 @@ export default function Blog() {
 }
 ```
 The above example is passing data via query string. The data is from title prop is being passed through the `title` query param.
+
+### Create post page
+`pages/post.js`
+```javascript
+import { useRouter } from 'next/router';
+import Layout from '../components/MyLayout';
+
+const Page = () => {
+  const router = useRouter();
+  return (
+    <Layout>
+      <h1>{router.query.title}</h1>
+      <p>This is the blog post content.</p>
+    </Layout>
+  );
+};
+
+export default Page;
+```
+`useRouter` allows you to access the router object inside the page, it's a React Hook, and it works with functional components.
+
+In the following example you can see useRouter being added to a component other than the exported page:
+
+```javascript
+import { useRouter } from 'next/router';
+import Layout from '../components/MyLayout.js';
+
+const Content = () => {
+  const router = useRouter();
+  return (
+    <>
+      <h1>{router.query.title}</h1>
+      <p>This is the blog post content.</p>
+    </>
+  );
+};
+
+const Page = () => (
+  <Layout>
+    <Content />
+  </Layout>
+);
+
+export default Page;
+```
+It data doesn't have to be pass query strings it could be done with clean URLs (Example:  `http://localhost:3000/blog/hello-nextjs`)
