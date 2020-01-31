@@ -53,3 +53,10 @@ To reset local file to its original state from origin
 ```sh
 git checkout <path/filename>
 ```
+
+### Revert File to Previous Commit
+```sh
+    git checkout <commit_hash>~1 -- <file>
+```
+- **~1** means the previous commit
+- **- -** is commonly used in command to indicate the end of options. It may also indicate that we are not switching branch and that we want to stay on current branch.
